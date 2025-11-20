@@ -23,8 +23,12 @@
       </div>
       <div class="hero-content">
         <h2>Contattaci</h2>
-        <p>Hai domande, vuoi un preventivo o vuoi prenotare subito il tuo van?<br>
-        Compila il modulo qui sotto o scrivici direttamente: <b>tuaemail@aruba.it</b></p>
+        <p>
+          Hai domande, vuoi un preventivo o vuoi prenotare subito il tuo van?<br>
+          Compila il modulo qui sotto o scrivici direttamente:<br>
+          <b><a href="mailto:info@rentmario.it">info@rentmario.it</a></b><br>
+          <b><a href="tel:+393289623852">+39 328 96 23 852</a></b>
+        </p>
       </div>
     </section>
     <section class="contact-section section-animate">
@@ -43,9 +47,37 @@
       </form>
       <div id="contact-success" class="contact-success"></div>
     </section>
+
+    <!-- FORM RECENSIONI -->
+    <section class="review-section section-animate">
+      <h3>Lascia una recensione</h3>
+      <form id="review-form">
+        <label>Nome</label>
+        <input type="text" name="reviewer" required />
+        <label>Recensione</label>
+        <textarea name="review" required rows="3"></textarea>
+        <button type="submit" class="cta-btn">Invia recensione</button>
+      </form>
+      <div id="review-success" class="contact-success"></div>
+    </section>
+
+    <!-- SLIDER RECENSIONI -->
+    <section class="reviews-slider section-animate">
+      <h3>Cosa dicono i nostri clienti</h3>
+      <div class="slider-container">
+        <div id="reviews-list" class="reviews-list">
+          <!-- Le recensioni appariranno qui -->
+        </div>
+      </div>
+    </section>
   </main>
-  <footer>
-    © <span id="year"></span> Rent Mario - Noleggio van senza conducente
+  <footer class="footer">
+    <div>
+      <b>Contatti:</b> <a href="tel:+393289623852">+39 328 96 23 852</a> | <a href="mailto:info@rentmario.it">info@rentmario.it</a>
+    </div>
+    <div>
+      © <span id="year"></span> Rent Mario - Noleggio van senza conducente
+    </div>
   </footer>
   <script src="main.js"></script>
 </body>
