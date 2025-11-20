@@ -100,12 +100,16 @@ main {
   z-index: 1;
 }
 .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   z-index: 2;
-  text-align: left;
   max-width: 600px;
   margin: 0 2rem;
+  text-align: center;
 }
+
 .cta-btn {
   background: #FFDA00;
   color: #000;
