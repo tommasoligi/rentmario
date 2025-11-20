@@ -16,8 +16,18 @@
     </nav>
   </header>
   <main>
-    <section class="contact-section">
-      <h2>Contattaci</h2>
+    <section class="contact-hero section-animate">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80" alt="Van in movimento" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h2>Contattaci</h2>
+        <p>Hai domande, vuoi un preventivo o vuoi prenotare subito il tuo van? <br>
+        Compila il modulo qui sotto o scrivici direttamente: <b>tuaemail@aruba.it</b></p>
+      </div>
+    </section>
+    <section class="contact-section section-animate">
       <form id="contact-form">
         <label>Nome</label>
         <input type="text" name="nome" required />
@@ -31,10 +41,11 @@
         <textarea name="messaggio" required rows="5"></textarea>
         <button type="submit" class="cta-btn">Invia richiesta</button>
       </form>
+      <div id="contact-success" class="contact-success"></div>
     </section>
   </main>
   <footer>
-    © <span id="year"></span> Rent Mario - Noleggio furgone senza conducente
+    © <span id="year"></span> Rent Mario - Noleggio van senza conducente
   </footer>
   <script src="main.js"></script>
 </body>
