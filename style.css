@@ -457,12 +457,18 @@ main {
   padding: 2rem 0 1rem 0;
   font-size: 1rem;
   margin-top: 2rem;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
 .footer > div {
   margin-bottom: 0.8em;
   line-height: 1.8;
   display: block;
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer a {
@@ -471,6 +477,7 @@ main {
   margin: 0 0.7em;
   font-weight: 500;
   transition: color 0.2s;
+  display: inline-block;
 }
 
 .footer a:hover {
@@ -486,15 +493,18 @@ main {
 
 @media (max-width: 700px) {
   .footer {
-    font-size: 0.98rem;
-    padding: 1.2rem 0 0.7rem 0;
-  }
-  .footer a {
-    display: inline-block;
-    margin: 0.3em 0.5em;
+    font-size: 1.05rem;
+    padding: 1.5rem 0 1rem 0;
+    width: 100vw;
   }
   .footer > div {
-    margin-bottom: 0.6em;
+    max-width: 98vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .footer a {
+    margin: 0.4em 0.7em;
+    font-size: 1.08em;
   }
 }
 .section-animate {
