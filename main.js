@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentReview = 0;
 function showReviews() {
   const reviews = getReviews();
+  const userId = getUserId();
   const reviewsList = document.getElementById("reviews-list");
   if (!reviewsList) return;
   reviewsList.innerHTML = "";
@@ -96,7 +97,7 @@ function showReviews() {
     div.innerHTML = `
       <div>"${r.review}"</div>
       <div class="review-author">- ${r.reviewer}</div>
-      <button class="delete-review-btn" data-index="${i}" title="Elimina recensione">🗑️</button>
+      ${r.userId === userId ? `<button class="delete-review-btn" data-index="${i}" title="Elimina recensione">🗑️</button>` : ""}
     `;
     reviewsList.appendChild(div);
   });
