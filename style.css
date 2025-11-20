@@ -48,6 +48,9 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   margin-top: 0.7em;
 }
+label, input, textarea, button {
+  font-family: 'Azeret Mono', Arial, monospace;
+}
 .header {
   background: #000;
   color: #FFDA00;
