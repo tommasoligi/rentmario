@@ -48,6 +48,14 @@ document.addEventListener("DOMContentLoaded", function () {
     { reviewer: "Giulia", review: "Prenotazione facile e van pulito. Perfetto per la nostra gita!" },
     { reviewer: "Marco", review: "Ottima assistenza e prezzi onesti. Tornerò sicuramente." }
   ];
+  function getUserId() {
+  let id = localStorage.getItem("rentMarioUserId");
+  if (!id) {
+    id = "user-" + Math.random().toString(36).substr(2, 9);
+    localStorage.setItem("rentMarioUserId", id);
+  }
+  return id;
+}
   function getReviews() {
     const stored = localStorage.getItem(reviewsKey);
     if (stored) {
@@ -55,11 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     return defaultReviews;
   }
-  function saveReview(r) {
-    const reviews = getReviews();
-    reviews.push(r);
-    localStorage.setItem(reviewsKey, JSON.stringify(reviews));
-  }
+function saveReview(r) {
+  const reviews = getReviews();
+  r.userId = getUserId(); // assegna l'id locale alla recensione
+  reviews.push(r);
+  localStorage.setItem("rentMarioReviews", JSON.stringify(reviews));
+}
 
   // Form recensioni
   const reviewForm = document.getElementById("review-form");
