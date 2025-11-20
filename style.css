@@ -396,6 +396,9 @@ main {
   margin-top: 1.5rem;
   width: 100%;
 }
+.review-link {
+  margin-top: 2.2rem;
+}
 .contact-success {
   display: none;
   margin-top: 1.5rem;
