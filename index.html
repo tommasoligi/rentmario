@@ -88,10 +88,37 @@
       <p>Contattaci ora e scopri le offerte dedicate a te!</p>
       <a href="contatti.html" class="cta-btn">Richiedi informazioni</a>
     </section>
+    <!-- RECENSIONI E FORM SIDE BY SIDE -->
+<section class="reviews-row section-animate">
+  <div class="review-section">
+    <h3>Lascia una recensione</h3>
+    <form id="review-form">
+      <label>Nome</label>
+      <input type="text" name="reviewer" required />
+      <label>Recensione</label>
+      <textarea name="review" required rows="3"></textarea>
+      <button type="submit" class="cta-btn">Invia recensione</button>
+    </form>
+    <div id="review-success" class="contact-success"></div>
+  </div>
+  <div class="reviews-slider">
+    <h3>Cosa dicono i nostri clienti</h3>
+    <div class="slider-container">
+      <div id="reviews-list" class="reviews-list">
+        <!-- Le recensioni appariranno qui -->
+      </div>
+    </div>
+  </div>
+</section>
   </main>
-  <footer>
+ <footer class="footer">
+  <div>
+    <b>Contatti:</b> <a href="tel:+393289623852">+39 328 96 23 852</a> | <a href="mailto:info@rentmario.it">info@rentmario.it</a>
+  </div>
+  <div>
     © <span id="year"></span> Rent Mario - Noleggio van senza conducente
-  </footer>
+  </div>
+</footer>
   <script src="main.js"></script>
 </body>
 </html>
