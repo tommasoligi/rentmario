@@ -92,6 +92,72 @@ main {
   background: #000;
   color: #FFDA00;
 }
+/* VAN SHOWCASE */
+.van-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem auto 2rem auto;
+  max-width: 1100px;
+}
+.van-imgs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.van-imgs img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+.van-desc {
+  background: #fff;
+  color: #000;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 2rem 2.5rem;
+  min-width: 320px;
+}
+.van-desc h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.van-desc ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+.van-desc li {
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+@media (max-width: 900px) {
+  .van-showcase {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0 1rem 0;
+  }
+  .van-imgs {
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  .van-imgs img {
+    width: 90px;
+    height: 60px;
+  }
+  .van-desc {
+    padding: 1rem;
+    min-width: unset;
+    font-size: 1rem;
+  }
+}
 .van-card {
   display: flex;
   align-items: center;
@@ -213,6 +279,42 @@ main {
   padding: 2rem;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.review-section form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+}
+.review-section input,
+.review-section textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  margin-bottom: 0.7rem;
+}
+.review-section button {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+.contact-success {
+  display: none;
+  margin-top: 1.5rem;
+  background: #FFDA00;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: bold;
 }
 .slider-container {
   overflow: hidden;
@@ -243,6 +345,22 @@ main {
   padding: 0.2em 0.7em;
   border-radius: 0.5em;
 }
+@media (max-width: 900px) {
+  .reviews-row {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  .review-section, .reviews-slider {
+    padding: 1rem;
+    max-width: 100%;
+  }
+  .slider-container, .reviews-list, .review-item {
+    height: auto;
+    min-height: 120px;
+  }
+}
+
 .footer {
   background: #000;
   color: #FFDA00;
