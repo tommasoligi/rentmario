@@ -626,6 +626,18 @@ main {
     padding: 0.15em 0.5em;
   }
 }
+.delete-review-btn {
+  background: none;
+  border: none;
+  color: #c00;
+  font-size: 1.2em;
+  margin-top: 0.5em;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.delete-review-btn:hover {
+  color: #ff0000;
+}
 .back-to-top {
   position: fixed;
   right: 20px;
