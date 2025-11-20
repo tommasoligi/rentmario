@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("#year").forEach(el => {
     el.textContent = new Date().getFullYear();
@@ -94,24 +93,8 @@ function showReviews() {
   reviews.forEach((r, i) => {
     const div = document.createElement("div");
     div.className = "review-item";
-    div.innerHTML = `
-      <div>"${r.review}"</div>
-      <div class="review-author">- ${r.reviewer}</div>
-      <button class="delete-review-btn" data-index="${i}" title="Elimina recensione">🗑️</button>
-    `;
+    div.innerHTML = `<div>"${r.review}"</div><div class="review-author">- ${r.reviewer}</div>`;
     reviewsList.appendChild(div);
-  });
-  reviewsList.querySelectorAll('.delete-review-btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      const idx = parseInt(this.getAttribute('data-index'));
-      if (confirm("Vuoi davvero eliminare questa recensione?")) {
-        const all = getReviews();
-        all.splice(idx, 1);
-        localStorage.setItem("rentMarioReviews", JSON.stringify(all));
-        showReviews();
-      }
-    });
   });
   reviewsList.style.transform = `translateX(-${currentReview * 100}%)`;
 }
