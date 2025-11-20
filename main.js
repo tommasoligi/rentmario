@@ -85,20 +85,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Slider recensioni
   let currentReview = 0;
-  function showReviews() {
-    const reviews = getReviews();
-    const reviewsList = document.getElementById("reviews-list");
-    if (!reviewsList) return;
-    reviewsList.innerHTML = "";
-    reviews.forEach((r, i) => {
-      const div = document.createElement("div");
-      div.className = "review-item";
-      div.innerHTML = `<div>"${r.review}"</div><div class="review-author">- ${r.reviewer}</div>`;
-      reviewsList.appendChild(div);
+function showReviews() {
+  const reviews = getReviews();
+  const reviewsList = document.getElementById("reviews-list");
+  if (!reviewsList) return;
+  reviewsList.innerHTML = "";
+  reviews.forEach((r, i) => {
+    const div = document.createElement("div");
+    div.className = "review-item";
+    div.innerHTML = `
+      <div>"${r.review}"</div>
+      <div class="review-author">- ${r.reviewer}</div>
+      <button class="delete-review-btn" data-index="${i}" title="Elimina recensione">🗑️</button>
+    `;
+    reviewsList.appendChild(div);
+  });
+  reviewsList.querySelectorAll('.delete-review-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const idx = parseInt(this.getAttribute('data-index'));
+      if (confirm("Vuoi davvero eliminare questa recensione?")) {
+        const all = getReviews();
+        all.splice(idx, 1);
+        localStorage.setItem("rentMarioReviews", JSON.stringify(all));
+        showReviews();
+      }
     });
-    // Mostra solo la recensione corrente
-    reviewsList.style.transform = `translateX(-${currentReview * 100}%)`;
-  }
+  });
+  reviewsList.style.transform = `translateX(-${currentReview * 100}%)`;
+}
   function nextReview() {
     const reviews = getReviews();
     currentReview = (currentReview + 1) % reviews.length;
