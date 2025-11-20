@@ -136,6 +136,18 @@ main {
   border-radius: 1rem;
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
 }
+.center-text {
+  text-align: center;
+}
+.van-card-desc h3 {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+.van-card-desc p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
 .van-desc {
   background: #fff;
   color: #000;
